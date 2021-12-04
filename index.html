@@ -146,6 +146,71 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-TW">
+    <link itemprop="mainEntityOfPage" href="https://raytm9999.github.io/2021/12/04/NO-3/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="raygakki">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="raygakki‘s 競程牧場">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/12/04/NO-3/" class="post-title-link" itemprop="url">AtCoder Beginner Contest 230 F</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">發表於</span>
+
+              <time title="創建時間：2021-12-04 23:50:23" itemprop="dateCreated datePublished" datetime="2021-12-04T23:50:23+08:00">2021-12-04</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新於</span>
+                <time title="修改時間：2021-12-05 00:12:13" itemprop="dateModified" datetime="2021-12-05T00:12:13+08:00">2021-12-05</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>題目不敘述<br>一開始看到N&lt;=2e5<br>瞬間想到nlogn<br>但這題看起來不是DP就是奇怪資結<br>DP很少有logn<br>所以就不自覺往資結想了<br>我資結很爛，所以卡了很久<br>DP真的沒想法<br>不知道合併要怎麼表示<br>偷瞄解答發現關鍵字DP<br>想了一段時間還是想不出來<br>看到提示是答案沒有重複的序列時是2^n-1<br>去實際寫一遍觀察很久才發現，若尾巴是零就會造成重複<br>以為是用set紀錄所有DP[sum]的值<br>但其實只要紀錄上上一個才對（不然會造成重複）<br>我覺得自己沒用到「加上尾巴」去討論這個問題很可惜<br>明明是DP常用手段<br>但因為這題很反直覺就沒想到<br>不然我覺得如果能加上尾巴去討論應該有機會想到==<br>下次遇到序列轉換問題，如果轉換順序無關，應該考慮能否用操作尾巴的方式去討論能得出解<br>幹等一下我懂了<br>序列轉換問題如果是取K個連續數然後sum丟回原序列<br>DP解可以考慮成把大區間分成K份下去做子問題（當然還包含其他要處理的操作）<br>但大方向應該是這樣<br>像這題就能拆成前面一堆跟尾巴一個來做DP<br>兩者要合併就要觀察前者的尾數在合併時會造成什麼影響<br>最後得解<br>OK<br>今天的DP套餐就到這裡<br>讚讚</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-TW">
     <link itemprop="mainEntityOfPage" href="https://raytm9999.github.io/2021/12/04/%E7%89%A7%E5%A0%B4%E9%96%8B%E5%BC%B5/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -329,7 +394,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">2</span>
+          <span class="site-state-item-count">3</span>
           <span class="site-state-item-name">文章</span>
         </a>
       </div>

@@ -20,19 +20,19 @@
     var CONFIG = {"hostname":"raytm9999.github.io","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="基本上這個blog是架來紀錄未來一年的競程經歷&amp;CF檢討心得大學才開始認真打競程還滿怪的cp值頗低一方面彌補高中時期的遺憾隊友也很有熱情反正這一年也沒要幹嘛就努力拼這個東東ㄅ我覺得這裡應該是不會放教學（？感覺很花時間ㄟ而且我其實不太會放圖片不過有機會的話應該還是會丟些東西上來ex:圖論總匯,DP大餐之類的個人短期計畫： 1.CF年底上千六沒上的話就把去年PCCA的寒假作業補完 2.學某超級">
+  <meta name="description" content="題目不敘述一開始看到N&lt;&#x3D;2e5瞬間想到nlogn但這題看起來不是DP就是奇怪資結DP很少有logn所以就不自覺往資結想了我資結很爛，所以卡了很久DP真的沒想法不知道合併要怎麼表示偷瞄解答發現關鍵字DP想了一段時間還是想不出來看到提示是答案沒有重複的序列時是2^n-1去實際寫一遍觀察很久才發現，若尾巴是零就會造成重複以為是用set紀錄所有DP[sum]的值但其實只要紀錄上上一個才對（不然會造">
 <meta property="og:type" content="article">
-<meta property="og:title" content="計畫">
-<meta property="og:url" content="https://raytm9999.github.io/2021/12/04/%E8%A8%88%E7%95%AB/index.html">
+<meta property="og:title" content="AtCoder Beginner Contest 230 F">
+<meta property="og:url" content="https://raytm9999.github.io/2021/12/04/NO-3/index.html">
 <meta property="og:site_name" content="raygakki‘s 競程牧場">
-<meta property="og:description" content="基本上這個blog是架來紀錄未來一年的競程經歷&amp;CF檢討心得大學才開始認真打競程還滿怪的cp值頗低一方面彌補高中時期的遺憾隊友也很有熱情反正這一年也沒要幹嘛就努力拼這個東東ㄅ我覺得這裡應該是不會放教學（？感覺很花時間ㄟ而且我其實不太會放圖片不過有機會的話應該還是會丟些東西上來ex:圖論總匯,DP大餐之類的個人短期計畫： 1.CF年底上千六沒上的話就把去年PCCA的寒假作業補完 2.學某超級">
+<meta property="og:description" content="題目不敘述一開始看到N&lt;&#x3D;2e5瞬間想到nlogn但這題看起來不是DP就是奇怪資結DP很少有logn所以就不自覺往資結想了我資結很爛，所以卡了很久DP真的沒想法不知道合併要怎麼表示偷瞄解答發現關鍵字DP想了一段時間還是想不出來看到提示是答案沒有重複的序列時是2^n-1去實際寫一遍觀察很久才發現，若尾巴是零就會造成重複以為是用set紀錄所有DP[sum]的值但其實只要紀錄上上一個才對（不然會造">
 <meta property="og:locale" content="zh_TW">
-<meta property="article:published_time" content="2021-12-04T09:24:29.000Z">
-<meta property="article:modified_time" content="2021-12-04T09:34:25.714Z">
+<meta property="article:published_time" content="2021-12-04T15:50:23.000Z">
+<meta property="article:modified_time" content="2021-12-04T16:12:13.287Z">
 <meta property="article:author" content="raygakki">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="https://raytm9999.github.io/2021/12/04/%E8%A8%88%E7%95%AB/">
+<link rel="canonical" href="https://raytm9999.github.io/2021/12/04/NO-3/">
 
 
 <script id="page-configurations">
@@ -45,7 +45,7 @@
   };
 </script>
 
-  <title>計畫 | raygakki‘s 競程牧場</title>
+  <title>AtCoder Beginner Contest 230 F | raygakki‘s 競程牧場</title>
   
 
 
@@ -151,7 +151,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-TW">
-    <link itemprop="mainEntityOfPage" href="https://raytm9999.github.io/2021/12/04/%E8%A8%88%E7%95%AB/">
+    <link itemprop="mainEntityOfPage" href="https://raytm9999.github.io/2021/12/04/NO-3/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -164,7 +164,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          計畫
+          AtCoder Beginner Contest 230 F
         </h1>
 
         <div class="post-meta">
@@ -173,10 +173,16 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">發表於</span>
-              
 
-              <time title="創建時間：2021-12-04 17:24:29 / 修改時間：17:34:25" itemprop="dateCreated datePublished" datetime="2021-12-04T17:24:29+08:00">2021-12-04</time>
+              <time title="創建時間：2021-12-04 23:50:23" itemprop="dateCreated datePublished" datetime="2021-12-04T23:50:23+08:00">2021-12-04</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新於</span>
+                <time title="修改時間：2021-12-05 00:12:13" itemprop="dateModified" datetime="2021-12-05T00:12:13+08:00">2021-12-05</time>
+              </span>
 
           
 
@@ -189,10 +195,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p>基本上這個blog是架來紀錄未來一年的競程經歷&amp;CF檢討心得<br>大學才開始認真打競程還滿怪的<br>cp值頗低<br>一方面彌補高中時期的遺憾<br>隊友也很有熱情<br>反正這一年也沒要幹嘛<br>就努力拼這個東東ㄅ<br>我覺得這裡應該是不會放教學（？<br>感覺很花時間ㄟ<br>而且我其實不太會放圖片<br>不過有機會的話應該還是會丟些東西上來<br>ex:圖論總匯,DP大餐之類的<br>個人短期計畫：</p>
-<p>1.CF年底上千六<br>沒上的話就把去年PCCA的寒假作業補完</p>
-<p>2.學某超級學弟把板中講義拼完<br>合理吧<br>沒到這種程度就不要提自己有多拼了</p>
-<p>3.一週一場比賽<br>不管vir或是真的都行<br>寫完賽後檢討，可能會po上來<br>其實我還想跟完主題套餐練習<br>但目前不知道這樣安排下來如何<br>先醬<br>希望明年隊名能改叫茸茸鼠</p>
+        <p>題目不敘述<br>一開始看到N&lt;=2e5<br>瞬間想到nlogn<br>但這題看起來不是DP就是奇怪資結<br>DP很少有logn<br>所以就不自覺往資結想了<br>我資結很爛，所以卡了很久<br>DP真的沒想法<br>不知道合併要怎麼表示<br>偷瞄解答發現關鍵字DP<br>想了一段時間還是想不出來<br>看到提示是答案沒有重複的序列時是2^n-1<br>去實際寫一遍觀察很久才發現，若尾巴是零就會造成重複<br>以為是用set紀錄所有DP[sum]的值<br>但其實只要紀錄上上一個才對（不然會造成重複）<br>我覺得自己沒用到「加上尾巴」去討論這個問題很可惜<br>明明是DP常用手段<br>但因為這題很反直覺就沒想到<br>不然我覺得如果能加上尾巴去討論應該有機會想到==<br>下次遇到序列轉換問題，如果轉換順序無關，應該考慮能否用操作尾巴的方式去討論能得出解<br>幹等一下我懂了<br>序列轉換問題如果是取K個連續數然後sum丟回原序列<br>DP解可以考慮成把大區間分成K份下去做子問題（當然還包含其他要處理的操作）<br>但大方向應該是這樣<br>像這題就能拆成前面一堆跟尾巴一個來做DP<br>兩者要合併就要觀察前者的尾數在合併時會造成什麼影響<br>最後得解<br>OK<br>今天的DP套餐就到這裡<br>讚讚</p>
 
     </div>
 
@@ -207,11 +210,11 @@
 
         
     <div class="post-nav">
-      <div class="post-nav-item"></div>
       <div class="post-nav-item">
-    <a href="/2021/12/04/%E7%89%A7%E5%A0%B4%E9%96%8B%E5%BC%B5/" rel="next" title="牧場開張">
-      牧場開張 <i class="fa fa-chevron-right"></i>
+    <a href="/2021/12/04/%E7%89%A7%E5%A0%B4%E9%96%8B%E5%BC%B5/" rel="prev" title="牧場開張">
+      <i class="fa fa-chevron-left"></i> 牧場開張
     </a></div>
+      <div class="post-nav-item"></div>
     </div>
       </footer>
     
