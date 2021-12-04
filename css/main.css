@@ -1196,7 +1196,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #a6a4ff;
+  background: #ff9f6a;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -1990,13 +1990,6 @@ pre .javascript .function {
 #qr p {
   text-align: center;
 }
-body {
-  background: url("/images/background.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: center center;
-}
 .category-all-page .category-all-title {
   text-align: center;
 }
@@ -2175,6 +2168,13 @@ ul.breadcrumb li + li:last-child {
 }
 .tag-cloud a:hover {
   color: var(--link-hover-color) !important;
+}
+body {
+  background: url("/images/background.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center center;
 }
 @media (max-width: 767px) {
   .header-inner,
