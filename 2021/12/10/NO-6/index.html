@@ -20,19 +20,19 @@
     var CONFIG = {"hostname":"raytm9999.github.io","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="題目不敘述一開始看到N&lt;&#x3D;2e5瞬間想到nlogn但這題看起來不是DP就是奇怪資結DP很少有logn所以就不自覺往資結想了我資結很爛，所以卡了很久DP真的沒想法不知道合併要怎麼表示偷瞄解答發現關鍵字DP想了一段時間還是想不出來看到提示是答案沒有重複的序列時是2^n-1去實際寫一遍觀察很久才發現，若尾巴是零就會造成重複以為是用set紀錄所有DP[sum]的值但其實只要紀錄上上一個才對（不然會造">
+  <meta name="description" content="寫了難度1500~2000的三題E核心題敘：有一顆以1為根的樹，標記一些其他點，如果1到任何一個子節點比那些標記的點都快就贏了點數&lt;&#x3D;2e5E1:求是否能贏？作法：從那些標記點做多點BFS，紀錄每個根到這些點的最短距離，再從根做一次BFS看有沒有點比較近就好了。E2:如果能贏，請輸出最少需要保留哪些標記點才能贏，不行輸出-1我寫完第一題思路被卡住，以為是要把題目轉成序列，後來又搞了很久才AC">
 <meta property="og:type" content="article">
-<meta property="og:title" content="AtCoder Beginner Contest 230 F">
-<meta property="og:url" content="https://raytm9999.github.io/2021/12/04/NO-3/index.html">
+<meta property="og:title" content="Codeforces Round">
+<meta property="og:url" content="https://raytm9999.github.io/2021/12/10/NO-6/index.html">
 <meta property="og:site_name" content="raygakki‘s 競程牧場">
-<meta property="og:description" content="題目不敘述一開始看到N&lt;&#x3D;2e5瞬間想到nlogn但這題看起來不是DP就是奇怪資結DP很少有logn所以就不自覺往資結想了我資結很爛，所以卡了很久DP真的沒想法不知道合併要怎麼表示偷瞄解答發現關鍵字DP想了一段時間還是想不出來看到提示是答案沒有重複的序列時是2^n-1去實際寫一遍觀察很久才發現，若尾巴是零就會造成重複以為是用set紀錄所有DP[sum]的值但其實只要紀錄上上一個才對（不然會造">
+<meta property="og:description" content="寫了難度1500~2000的三題E核心題敘：有一顆以1為根的樹，標記一些其他點，如果1到任何一個子節點比那些標記的點都快就贏了點數&lt;&#x3D;2e5E1:求是否能贏？作法：從那些標記點做多點BFS，紀錄每個根到這些點的最短距離，再從根做一次BFS看有沒有點比較近就好了。E2:如果能贏，請輸出最少需要保留哪些標記點才能贏，不行輸出-1我寫完第一題思路被卡住，以為是要把題目轉成序列，後來又搞了很久才AC">
 <meta property="og:locale" content="zh_TW">
-<meta property="article:published_time" content="2021-12-04T15:50:23.000Z">
-<meta property="article:modified_time" content="2021-12-04T16:12:13.287Z">
+<meta property="article:published_time" content="2021-12-10T10:12:36.000Z">
+<meta property="article:modified_time" content="2021-12-10T10:50:28.825Z">
 <meta property="article:author" content="raygakki">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="https://raytm9999.github.io/2021/12/04/NO-3/">
+<link rel="canonical" href="https://raytm9999.github.io/2021/12/10/NO-6/">
 
 
 <script id="page-configurations">
@@ -45,7 +45,7 @@
   };
 </script>
 
-  <title>AtCoder Beginner Contest 230 F | raygakki‘s 競程牧場</title>
+  <title>Codeforces Round | raygakki‘s 競程牧場</title>
   
 
 
@@ -151,7 +151,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-TW">
-    <link itemprop="mainEntityOfPage" href="https://raytm9999.github.io/2021/12/04/NO-3/">
+    <link itemprop="mainEntityOfPage" href="https://raytm9999.github.io/2021/12/10/NO-6/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -164,7 +164,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          AtCoder Beginner Contest 230 F
+          Codeforces Round
         </h1>
 
         <div class="post-meta">
@@ -173,16 +173,10 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">發表於</span>
+              
 
-              <time title="創建時間：2021-12-04 23:50:23" itemprop="dateCreated datePublished" datetime="2021-12-04T23:50:23+08:00">2021-12-04</time>
+              <time title="創建時間：2021-12-10 18:12:36 / 修改時間：18:50:28" itemprop="dateCreated datePublished" datetime="2021-12-10T18:12:36+08:00">2021-12-10</time>
             </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新於</span>
-                <time title="修改時間：2021-12-05 00:12:13" itemprop="dateModified" datetime="2021-12-05T00:12:13+08:00">2021-12-05</time>
-              </span>
 
           
 
@@ -195,7 +189,9 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p>題目不敘述<br>一開始看到N&lt;=2e5<br>瞬間想到nlogn<br>但這題看起來不是DP就是奇怪資結<br>DP很少有logn<br>所以就不自覺往資結想了<br>我資結很爛，所以卡了很久<br>DP真的沒想法<br>不知道合併要怎麼表示<br>偷瞄解答發現關鍵字DP<br>想了一段時間還是想不出來<br>看到提示是答案沒有重複的序列時是2^n-1<br>去實際寫一遍觀察很久才發現，若尾巴是零就會造成重複<br>以為是用set紀錄所有DP[sum]的值<br>但其實只要紀錄上上一個才對（不然會造成重複）<br>我覺得自己沒用到「加上尾巴」去討論這個問題很可惜<br>明明是DP常用手段<br>但因為這題很反直覺就沒想到<br>不然我覺得如果能加上尾巴去討論應該有機會想到==<br>下次遇到序列轉換問題，如果轉換順序無關，應該考慮能否用操作尾巴的方式去討論能得出解<br>幹等一下我懂了<br>序列轉換問題如果是取K個連續數然後sum丟回原序列<br>DP解可以考慮成把大區間分成K份下去做子問題（當然還包含其他要處理的操作）<br>但大方向應該是這樣<br>像這題就能拆成前面一堆跟尾巴一個來做DP<br>兩者要合併就要觀察前者的尾數在合併時會造成什麼影響<br>最後得解<br>OK<br>今天的DP套餐就到這裡<br>讚讚</p>
+        <p>寫了難度1500~2000的三題<br>E核心題敘：<br>有一顆以1為根的樹，標記一些其他點，如果1到任何一個子節點比那些標記的點都快就贏了<br>點數&lt;=2e5<br>E1:求是否能贏？<br>作法：從那些標記點做多點BFS，紀錄每個根到這些點的最短距離，再從根做一次BFS看有沒有點比較近就好了。<br>E2:如果能贏，請輸出最少需要保留哪些標記點才能贏，不行輸出-1<br>我寫完第一題思路被卡住，以為是要把題目轉成序列，後來又搞了很久才AC<br>作法：樹DP，我們將一個點的值設為最少能用多少個點防住，防不住就是-1<br>首先我們來看點X，我們只考慮x和他的子樹<br>葉節點一定是-1<br>如果x和標記點的距離&lt;=x和1的距離，則點x和他的子樹就只需要一個點防住就行了<br>如果不是，就看子節點需要多少點，但若有任何一個是-1，代表這整個子樹防不住，故為-1<br>沒有的會就是子樹需要的數量加總<br>問題點：<br>我們做DP只會考慮到點x底下防守點與x的距離，如果有上面有其他防守點和x更近，我們以為防守不住但其實可以要怎麼辦？<br>不會影響，因為更上面的點會解決這個問題，並且將這個錯誤資訊合併成正確的。</p>
+<p>我覺得很難==，因為我沒想過DP能夠在只計算子樹裡與標記點距離之下能完美解決這問題，隊友一下就解掉了，很遮。<br>F:<br>題目：給一串序列，再給一個值X(非負數)，求序列裡合法最長連續子序列，合法的定義是這個子序列（假設x1,x2,…,xn）x1+…+xi&gt;=-X(1&lt;=i&lt;=n)<br>作法：slide window就做掉了，經典題是X=0，這題小變化一下。<br>這題難度居然最高，我不懂==</p>
+<p>先醬</p>
 
     </div>
 
@@ -211,13 +207,10 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2021/12/04/%E7%89%A7%E5%A0%B4%E9%96%8B%E5%BC%B5/" rel="prev" title="牧場開張">
-      <i class="fa fa-chevron-left"></i> 牧場開張
+    <a href="/2021/12/09/NO-5/" rel="prev" title="重戰GPE小記錄">
+      <i class="fa fa-chevron-left"></i> 重戰GPE小記錄
     </a></div>
-      <div class="post-nav-item">
-    <a href="/2021/12/07/NO-4/" rel="next" title="這幾天在幹嘛">
-      這幾天在幹嘛 <i class="fa fa-chevron-right"></i>
-    </a></div>
+      <div class="post-nav-item"></div>
     </div>
       </footer>
     
