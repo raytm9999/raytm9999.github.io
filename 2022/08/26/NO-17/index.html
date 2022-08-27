@@ -20,19 +20,19 @@
     var CONFIG = {"hostname":"raytm9999.github.io","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="題目不敘述一開始看到N&lt;&#x3D;2e5瞬間想到nlogn但這題看起來不是DP就是奇怪資結DP很少有logn所以就不自覺往資結想了我資結很爛，所以卡了很久DP真的沒想法不知道合併要怎麼表示偷瞄解答發現關鍵字DP想了一段時間還是想不出來看到提示是答案沒有重複的序列時是2^n-1去實際寫一遍觀察很久才發現，若尾巴是零就會造成重複以為是用set紀錄所有DP[sum]的值但其實只要紀錄上上一個才對（不然會造">
+  <meta name="description" content="現在接近暑假尾聲，記錄一下大學充實(?的暑假首先結束了忙碌的期末隨之而來的是休息時間跟同學約打電動還有吃飯之類的事但之後一個半月幾乎都在各種雜事正事間忙活按照重要程度大概分為各種ML＋DL課程論文閱讀兩個暑期通識半途而廢的比賽我覺得ML入門可以寫一篇技術性文章好好討論初學者應該如何進入這個領域總之今天先講我的歷程經過AI的洗禮讓我知道這領域水有多深暑假開始修李鴻毅教授的課都覺得比以前簡單許多後來就">
 <meta property="og:type" content="article">
-<meta property="og:title" content="AtCoder Beginner Contest 230 F">
-<meta property="og:url" content="https://raytm9999.github.io/2021/12/04/NO-3/index.html">
+<meta property="og:title" content="暑假要結束了之新展望">
+<meta property="og:url" content="https://raytm9999.github.io/2022/08/26/NO-17/index.html">
 <meta property="og:site_name" content="raygakki‘s 安全牛牧場">
-<meta property="og:description" content="題目不敘述一開始看到N&lt;&#x3D;2e5瞬間想到nlogn但這題看起來不是DP就是奇怪資結DP很少有logn所以就不自覺往資結想了我資結很爛，所以卡了很久DP真的沒想法不知道合併要怎麼表示偷瞄解答發現關鍵字DP想了一段時間還是想不出來看到提示是答案沒有重複的序列時是2^n-1去實際寫一遍觀察很久才發現，若尾巴是零就會造成重複以為是用set紀錄所有DP[sum]的值但其實只要紀錄上上一個才對（不然會造">
+<meta property="og:description" content="現在接近暑假尾聲，記錄一下大學充實(?的暑假首先結束了忙碌的期末隨之而來的是休息時間跟同學約打電動還有吃飯之類的事但之後一個半月幾乎都在各種雜事正事間忙活按照重要程度大概分為各種ML＋DL課程論文閱讀兩個暑期通識半途而廢的比賽我覺得ML入門可以寫一篇技術性文章好好討論初學者應該如何進入這個領域總之今天先講我的歷程經過AI的洗禮讓我知道這領域水有多深暑假開始修李鴻毅教授的課都覺得比以前簡單許多後來就">
 <meta property="og:locale" content="zh_TW">
-<meta property="article:published_time" content="2021-12-04T15:50:23.000Z">
-<meta property="article:modified_time" content="2021-12-04T16:12:13.287Z">
+<meta property="article:published_time" content="2022-08-26T01:59:33.000Z">
+<meta property="article:modified_time" content="2022-08-27T03:25:34.866Z">
 <meta property="article:author" content="raygakki">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="https://raytm9999.github.io/2021/12/04/NO-3/">
+<link rel="canonical" href="https://raytm9999.github.io/2022/08/26/NO-17/">
 
 
 <script id="page-configurations">
@@ -45,7 +45,7 @@
   };
 </script>
 
-  <title>AtCoder Beginner Contest 230 F | raygakki‘s 安全牛牧場</title>
+  <title>暑假要結束了之新展望 | raygakki‘s 安全牛牧場</title>
   
 
 
@@ -151,7 +151,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-TW">
-    <link itemprop="mainEntityOfPage" href="https://raytm9999.github.io/2021/12/04/NO-3/">
+    <link itemprop="mainEntityOfPage" href="https://raytm9999.github.io/2022/08/26/NO-17/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -164,7 +164,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          AtCoder Beginner Contest 230 F
+          暑假要結束了之新展望
         </h1>
 
         <div class="post-meta">
@@ -174,14 +174,14 @@
               </span>
               <span class="post-meta-item-text">發表於</span>
 
-              <time title="創建時間：2021-12-04 23:50:23" itemprop="dateCreated datePublished" datetime="2021-12-04T23:50:23+08:00">2021-12-04</time>
+              <time title="創建時間：2022-08-26 09:59:33" itemprop="dateCreated datePublished" datetime="2022-08-26T09:59:33+08:00">2022-08-26</time>
             </span>
               <span class="post-meta-item">
                 <span class="post-meta-item-icon">
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新於</span>
-                <time title="修改時間：2021-12-05 00:12:13" itemprop="dateModified" datetime="2021-12-05T00:12:13+08:00">2021-12-05</time>
+                <time title="修改時間：2022-08-27 11:25:34" itemprop="dateModified" datetime="2022-08-27T11:25:34+08:00">2022-08-27</time>
               </span>
 
           
@@ -195,7 +195,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p>題目不敘述<br>一開始看到N&lt;=2e5<br>瞬間想到nlogn<br>但這題看起來不是DP就是奇怪資結<br>DP很少有logn<br>所以就不自覺往資結想了<br>我資結很爛，所以卡了很久<br>DP真的沒想法<br>不知道合併要怎麼表示<br>偷瞄解答發現關鍵字DP<br>想了一段時間還是想不出來<br>看到提示是答案沒有重複的序列時是2^n-1<br>去實際寫一遍觀察很久才發現，若尾巴是零就會造成重複<br>以為是用set紀錄所有DP[sum]的值<br>但其實只要紀錄上上一個才對（不然會造成重複）<br>我覺得自己沒用到「加上尾巴」去討論這個問題很可惜<br>明明是DP常用手段<br>但因為這題很反直覺就沒想到<br>不然我覺得如果能加上尾巴去討論應該有機會想到==<br>下次遇到序列轉換問題，如果轉換順序無關，應該考慮能否用操作尾巴的方式去討論能得出解<br>幹等一下我懂了<br>序列轉換問題如果是取K個連續數然後sum丟回原序列<br>DP解可以考慮成把大區間分成K份下去做子問題（當然還包含其他要處理的操作）<br>但大方向應該是這樣<br>像這題就能拆成前面一堆跟尾巴一個來做DP<br>兩者要合併就要觀察前者的尾數在合併時會造成什麼影響<br>最後得解<br>OK<br>今天的DP套餐就到這裡<br>讚讚</p>
+        <p>現在接近暑假尾聲，記錄一下大學充實(?的暑假<br>首先結束了忙碌的期末隨之而來的是休息時間<br>跟同學約打電動還有吃飯之類的事<br>但之後一個半月幾乎都在各種雜事正事間忙活<br>按照重要程度大概分為<br>各種ML＋DL課程<br>論文閱讀<br>兩個暑期通識<br>半途而廢的比賽<br>我覺得ML入門可以寫一篇技術性文章好好討論<br>初學者應該如何進入這個領域<br>總之今天先講我的歷程<br>經過AI的洗禮讓我知道這領域水有多深<br>暑假開始修李鴻毅教授的課都覺得比以前簡單許多<br>後來就開始讀論文<br>一開始覺得很有難度，但經過兩次的報告跟整理就好多了<br>最後為了練pytorch跑去看uc berkley的課<br>相當有收穫<br>通識則是每個禮拜固定花數小時的拉ㄐ<br>AI課有稍微增加我的一些額外知識<br>還有稍微跟他人討論一下議題<br>但大部分都在浪費時間<br>職場相關的倒是意外讓我增加很多知識<br>而且80%分數都有夠好拿<br>所以我覺得其實滿值得的<br>最後提到半途而廢的比賽<br>一開始被人邀去<br>以為自己能行但不行<br>壓力有夠大<br>隊友跟我說他有頂不太住<br>我也覺得撐不住就退了<br>現在覺得好險退了<br>不然根本撐不住<br>總之這暑假過的還是滿充實的啦讚讚</p>
 
     </div>
 
@@ -211,13 +211,10 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2021/12/04/%E7%89%A7%E5%A0%B4%E9%96%8B%E5%BC%B5/" rel="prev" title="牧場開張">
-      <i class="fa fa-chevron-left"></i> 牧場開張
+    <a href="/2022/05/14/NO-16/" rel="prev" title="快期末總結＋計畫一下">
+      <i class="fa fa-chevron-left"></i> 快期末總結＋計畫一下
     </a></div>
-      <div class="post-nav-item">
-    <a href="/2021/12/07/NO-4/" rel="next" title="這幾天在幹嘛">
-      這幾天在幹嘛 <i class="fa fa-chevron-right"></i>
-    </a></div>
+      <div class="post-nav-item"></div>
     </div>
       </footer>
     
